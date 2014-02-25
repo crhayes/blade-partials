@@ -42,7 +42,7 @@ Rendering a Partial
 -------------------
 We use the `@render('block-to-render')` directive to render a block of content that was provided via the respective `@block` directive. Note that we can also provide a default value.
 
-```php
+```html
 <div class="panel">
     <div class="panel-heading">
         <h3 class="panel-title">@render('title', 'Default Title')</h3>
