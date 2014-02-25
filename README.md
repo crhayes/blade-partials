@@ -21,6 +21,16 @@ Begin by installing this package through Composer.
     }
 }
 ```
+Next open up `app/config/app.php`, comment out the Illuminate View Service Provider, and add the one from this package:
+```php
+'providers' => array(
+    //'Illuminate\View\ViewServiceProvider',
+    ...
+    'Crhayes\BladePartials\ViewServiceProvider',
+)
+```
+
+And that's it!
 
 Creating a Partial
 ------------------
