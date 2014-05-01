@@ -86,7 +86,7 @@ class Environment extends \Illuminate\View\Environment {
 	 */
 	public function flushBlocks()
 	{
-		$this->blocks = [];
+		$this->blocks = array();
 	}
 
 }
