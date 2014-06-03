@@ -1,6 +1,6 @@
 <?php namespace Crhayes\BladePartials;
 
-class Environment extends \Illuminate\View\Environment {
+class Environment extends \Illuminate\View\Factory {
 
 	/**
 	 * Storage for our blocks.
