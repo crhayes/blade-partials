@@ -119,7 +119,7 @@ You can also do some cool things by nesting partials. For example:
 @stop
 
 // partials/danger-panel.blade.php
-@partial('app.blocks.panel')
+@partial('partials.panel')
     @block('type', 'danger')
 
     @block('title')
