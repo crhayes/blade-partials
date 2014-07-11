@@ -26,7 +26,7 @@ class ViewServiceProvider extends \Illuminate\View\ViewServiceProvider {
 	 *
 	 * @return void
 	 */
-	public function registerEnvironment()
+	public function registerFactory()
 	{
 		$this->app->bindShared('view', function($app)
 		{
@@ -37,7 +37,7 @@ class ViewServiceProvider extends \Illuminate\View\ViewServiceProvider {
 
 			$finder = $app['view.finder'];
 
-			$env = new Environment($resolver, $finder, $app['events']);
+			$env = new Factory($resolver, $finder, $app['events']);
 
 			// We will also set the container instance on this view environment since the
 			// view composers may be classes registered in the container, which allows
