@@ -27,7 +27,7 @@ class Factory extends \Illuminate\View\Factory {
 
         }else{
             //params passed
-            $vars = array_merge($vars,$arg3);
+            $vars = array_merge($arg3,$vars);
             $callback=$arg4;
         }
 		$callback($file, $vars);
