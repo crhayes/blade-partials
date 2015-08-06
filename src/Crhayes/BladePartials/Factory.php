@@ -16,11 +16,20 @@ class Factory extends \Illuminate\View\Factory {
 	 * 
 	 * @param  string 	$file
 	 * @param  array 	$vars
-	 * @param  closure 	$callback
+	 * @param  array|closure 	$arg3
+	 * @param  closure|bool 	$arg4
 	 * @return void
 	 */
-	public function renderPartial($file, $vars, $callback)
+	public function renderPartial($file, $vars, $arg3, $arg4 = false)
 	{
+        if(!$arg4){
+            $callback=$arg3;
+
+        }else{
+            //params passed
+            $vars = array_merge($arg3,$vars);
+            $callback=$arg4;
+        }
 		$callback($file, $vars);
 
 		$this->flushBlocks();
